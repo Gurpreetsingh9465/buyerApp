@@ -60,9 +60,9 @@ python -v
     
 8. Go To [google Security](https://myaccount.google.com/security)
       * Disable 2 step verification
-      * Genrate App specific Password
+      * Generate App specific Password
       * Select Desktop While Creating App Password
-      * Copy the app Password And Change Your .env File and paste the Password and gmailId
+      * Copy password and you email id and paste it to .env file
     ```
       EMAIL_ID = youremail@gmail.com
       EMAIL_PASSWORD = ************
