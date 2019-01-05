@@ -1,4 +1,4 @@
-# shopkeeperApp
+# buyerApp
 
 ## Installation Instructions
 
