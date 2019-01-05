@@ -67,17 +67,35 @@ python -v
       EMAIL_ID = youremail@gmail.com
       EMAIL_PASSWORD = ************
     ```
-    
-9. Install Packets (open terminal/CMD with location ```desired/location/buyerApp```)
-   * install All packages like react express etc..
-    ```
-    npm install
-    ```
-10. `npm run watch`
 
-11. open another terminal and run 
+9. create virtual environment
+   * For pip users
+   ```
+      sudo apt-get install python-pip python-dev python-virtualenv
+      virtualenv --system-site-packages ~/dzone --python=python3.6
+      source ~/dzone/bin/activate
+   ```
+   * For Anaconda users
+   ```
+      conda create -n dzone python=3.6 anaconda
+      source activate dzone
+      or
+      activate dzone
+   ```
+
+10. Install Packages (open terminal/CMD with location ```desired/location/buyerApp```)
+   * install All packages like react express django etc.. (you can use pip / conda)
+   * make sure your virtual environment is activated
+    ```
+       pip install -r requirements.txt
+       npm install
+    ```
+
+11. `npm run watch`
+
+12. open another terminal and run 
       * `python manage.py makemigrations`
       * `python mange.py migrate`
       * `python mange.py runserver 0.0.0.0:3000`
    
-12. Open Your Browser And go to `localhost:3000`
+13. Open Your Browser And go to `localhost:3000`
