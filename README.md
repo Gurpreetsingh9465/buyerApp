@@ -57,84 +57,27 @@ python -v
       EMAIL_PASSWORD = ************
       SECRET_KEY = df^009dg03s%)@2@0vw-$b96ray=rk2%#@epf0+c2&zkgbmg^0
     ```
-
-8. Install Packets (open terminal/CMD with location ```desired/location/buyerApp```)
+    
+8. Go To [google Security](https://myaccount.google.com/security)
+    * Disable 2 step verification
+    * Genrate App specific Password
+    * Select Desktop While Creating App Password
+    * Copy the app Password And Change Your .env File and paste the Password and gmailId
     ```
-    npm install -g nodemon
+      EMAIL_ID = youremail@gmail.com
+      EMAIL_PASSWORD = ************
     ```
+    
+9. Install Packets (open terminal/CMD with location ```desired/location/buyerApp```)
 * install All packages like react express etc..
     ```
     npm install
     ```
-    
-9. open `keys/oauth.js` in your favorite text editor
-    * Go To SignIn And Create New Project [Google Cloud](https://console.cloud.google.com/apis/credentials)
-    * go to enable API
-    * ![enable api](https://raw.githubusercontent.com/Gurpreetsingh9465/fabrik-bugs/master/enableApi.png)
-    * enable Google+ API
-    * ![enable api](https://raw.githubusercontent.com/Gurpreetsingh9465/fabrik-bugs/master/enableG%2Bapi.png)
-    * click on create credentials and select these setting
-    * ![create](https://raw.githubusercontent.com/Gurpreetsingh9465/fabrik-bugs/master/createCredentials.png)
-    * Enter redirect URIs `http://localhost:3000/user/api/auth/google/callback` and origin as `http://localhost:3000`
-    * copy the client id and client secret to `keys/outh.js` save the credentials.
-    `keys/oauth.js`
-    ```
-       oauth = {
-       callbackURL:"http://localhost:3000/user/api/auth/google/callback",
-       clientID : 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-       clientSecret : 'XXXXXXXXXXXXXX',
-      };
-      
-      module.exports = oauth;
-    ```
+10. `npm run watch`
 
-10. open `keys/mail.js`
-   * Go To [Google Cloud](https://console.cloud.google.com/apis/credentials)
-   * select create credentials
-   * Create OAuth client ID
-   * select web application
-   * Enter javascript origin `https://developers.google.com` 
-   * Enter redirect URI `https://developers.google.com/oauthplayground`
-   * copy the client ID and Client Secret to the postions in the `keys/mail.js` and set user = `youremailid@gmail.com`
-   * By Now The File should look like
-   ```
-      mail = {
-          type:'OAuth2',
-          user: 'youremailid@gmail.com',
-          clientId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-          clientSecret: 'xxxxxxxxxxxxxxxxxxxxxxxxx',
-          refreshToken: '',
-          accessToken: '',
-          expires: 1484314697598
-      }
-
-      module.exports = mail;
-   ```
-   ***save these clientid and client secret to nodepad file as we need those in the next step***
-
-11. open [Google Playground](https://developers.google.com/oauthplayground)
-   * open Setting and fill your clientId and Client secret
-   * ![enable api](https://raw.githubusercontent.com/Gurpreetsingh9465/fabrik-bugs/master/seting.png)
-   * In the select and scope section select `https://mail.google.com/` under Gmail API v1 and press authorize and sign in.
-   * copy the refresh and access token and paste it to `/keys/mail.js`
-   ```
-   mail = {
-          type:'OAuth2',
-          user: 'youremailid@gmail.com',
-          clientId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-          clientSecret: 'xxxxxxxxxxxxxxxxxxxxxxxxx',
-          refreshToken: 'xxxxxxxxxxxxxxxxxxxxxx',
-          accessToken: 'xxxxxxxxxxxxxxxxxxxxxxxx',
-          expires: 1484314697598
-      }
-
-      module.exports = mail;
-   ```
-   * make sure to tick `autorefresh token it expires`
-   * save all settings
-
-### Final Step :flushed:
-12. open 2 terminal/cmd with location `your/location/shopkeeper/`
-   * inside terminal one run `npm run watch`
-   * inside terminal two run `nodemon`
-   * open browser with url localhost:3000
+11. open another terminal and run 
+   * `python manage.py makemigrations`
+   * `python mange.py migrate`
+   * `python mange.py runserver 0.0.0.0:3000`
+   
+12. Open Your Browser And go to `localhost:3000`
