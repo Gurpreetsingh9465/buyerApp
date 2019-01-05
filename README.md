@@ -86,10 +86,10 @@ python -v
 10. Install Packages (open terminal/CMD with location ```desired/location/buyerApp```)
    * install All packages like react express django etc.. (you can use pip / conda)
    * make sure your virtual environment is activated
-    ```
-       pip install -r requirements.txt
-       npm install
-    ```
+   ```
+      pip install -r requirements.txt
+      npm install
+   ```
 
 11. `npm run watch`
 
