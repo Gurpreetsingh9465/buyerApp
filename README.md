@@ -6,11 +6,13 @@
 #### Installation
 1. Install Node.js
     * [Install Node.js](https://nodejs.org)
+    * [Install Python 3.6](https://www.python.org/)
 
 2. Verify Installation (open Terminal/CMD)
 ```
 node -v
 npm -v
+python -v
 ```
 
 3. Install Postgrsql [Install Postgresql](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) **Important** *note the username and password used while installing postgresql.* ***prefered username=postgres password = root***
@@ -19,7 +21,7 @@ npm -v
     * login as user postgres by running ```psql.exe -U postgres``` and type the commands below:
 
         ```
-        CREATE DATABASE shopkeeper;
+        CREATE DATABASE buyer;
         CREATE USER admin WITH PASSWORD 'root';
         ALTER ROLE admin SET client_encoding TO 'utf8';
         ALTER ROLE admin SET default_transaction_isolation TO 'read committed';
@@ -34,7 +36,7 @@ npm -v
 5. Get the source code on to your machine via git.
 
     ```
-    git clone https://github.com/Gurpreetsingh9465/shopkeeperApp.git && cd shopkeeperApp
+    https://github.com/Gurpreetsingh9465/buyerApp.git && cd buyerApp
     ```
 
 6. Rename `sample.env` as `.env`.
@@ -45,18 +47,18 @@ npm -v
  
  7. Change the contents of `.env` file
     ```
-    DEBUG = *,-babel*,-eslint:*,-express*,-body*,-send*,-morgan*
-    DATABASE_USER = admin
-    DATABASE_PASSWORD = root
-    DB_HOST = localhost
-    DB_PORT = 5432
-    DATABASE = shopkeeper
-    SECRET = J@NcRfUjXn2r5u8x/A?D*G-KaPdSgVkYp3s6v9y$B&E)H+MbQeThWmZq4t7w!z%C
-    API_HOST = http://localhost:3000
-    IMAGE_DEST = "desired/location/to/upload/images"
+      DATABASE_NAME = buyer
+      DATABASE_USER_NAME = postgres
+      USER_PASSWORD = root
+      HOST = localhost
+      DATABASE_PORT = 5432
+      API_HOST = http://localhost:3000
+      EMAIL_ID = youremail@gmail.com
+      EMAIL_PASSWORD = ************
+      SECRET_KEY = df^009dg03s%)@2@0vw-$b96ray=rk2%#@epf0+c2&zkgbmg^0
     ```
-    
-8. Install Packets (open terminal/CMD with location ```desired/location/shopkeeperApp```)
+
+8. Install Packets (open terminal/CMD with location ```desired/location/buyerApp```)
     ```
     npm install -g nodemon
     ```
