@@ -4,7 +4,7 @@
 
 
 #### Installation
-1. Install Node.js
+1. Install Node.js and python
     * [Install Node.js](https://nodejs.org)
     * [Install Python 3.6](https://www.python.org/)
 
