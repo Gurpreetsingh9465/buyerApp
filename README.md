@@ -59,25 +59,25 @@ python -v
     ```
     
 8. Go To [google Security](https://myaccount.google.com/security)
-    * Disable 2 step verification
-    * Genrate App specific Password
-    * Select Desktop While Creating App Password
-    * Copy the app Password And Change Your .env File and paste the Password and gmailId
+      * Disable 2 step verification
+      * Genrate App specific Password
+      * Select Desktop While Creating App Password
+      * Copy the app Password And Change Your .env File and paste the Password and gmailId
     ```
       EMAIL_ID = youremail@gmail.com
       EMAIL_PASSWORD = ************
     ```
     
 9. Install Packets (open terminal/CMD with location ```desired/location/buyerApp```)
-* install All packages like react express etc..
+   * install All packages like react express etc..
     ```
     npm install
     ```
 10. `npm run watch`
 
 11. open another terminal and run 
-   * `python manage.py makemigrations`
-   * `python mange.py migrate`
-   * `python mange.py runserver 0.0.0.0:3000`
+      * `python manage.py makemigrations`
+      * `python mange.py migrate`
+      * `python mange.py runserver 0.0.0.0:3000`
    
 12. Open Your Browser And go to `localhost:3000`
