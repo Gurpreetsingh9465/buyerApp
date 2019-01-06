@@ -95,7 +95,7 @@ python -v
 
 12. open another terminal and run 
       * `python manage.py makemigrations`
-      * `python mange.py migrate`
-      * `python mange.py runserver 0.0.0.0:3000`
+      * `python manage.py migrate`
+      * `python manage.py runserver 0.0.0.0:3000`
    
 13. Open Your Browser And go to `localhost:3000`
