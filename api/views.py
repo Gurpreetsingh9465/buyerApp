@@ -135,7 +135,7 @@ def logout(request,userid):
 
 
 def google(request):
-    return JsonResponse({"message":"bas thode der ch google je an ge"})
+    return JsonResponse({"message":"google signin"})
 
 @ensure_csrf_cookie
 def signin(request):
