@@ -77,7 +77,7 @@ python -v
    ```
    * For Anaconda users
    ```
-      conda create -n dzone python=3.6 anaconda
+      conda create -n dzone python=3.6
       source activate dzone
       or
       activate dzone
