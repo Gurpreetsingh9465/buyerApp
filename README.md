@@ -94,8 +94,8 @@ python -v
 11. `npm run watch`
 
 12. open another terminal and run 
-      * `python manage.py makemigrations`
-      * `python manage.py migrate`
+      * `python manage.py makemigrations api`
+      * `python manage.py migrate api`
       * `python manage.py runserver 0.0.0.0:3000`
    
 13. Open Your Browser And go to `localhost:3000`
